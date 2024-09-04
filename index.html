@@ -4,83 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Downloads</title>
+    <title>ALVIN FILES</title>
+    <!-- Link to Favicon -->
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS for additional styling -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
         body {
-            background-color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
 
         .container {
-            margin-top: 50px;
+            max-width: 900px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
 
-        .table-container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .container h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .container p.lead {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .table thead th {
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+        }
+
+        .table tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .btn-primary {
+            background-color: #ff7e5f;
+            border: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            background-color: #feb47b;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            .container h1 {
+                font-size: 2.5rem;
+            }
+
+            .container p.lead {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10 table-container">
-                <h1 class="text-center mb-4">File Downloads</h1>
-                <p class="lead text-center mb-4">Klik pada tombol download untuk mengunduh file.</p>
-                <table class="table table-striped table-bordered">
-                    <thead class="thead-dark text-center">
-                        <tr>
-                            <th>#</th>
-                            <th>Nama File</th>
-                            <th>Download</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr>
-                            <td>1</td>
-                            <td>Injektor Point Blank V1</td>
-                            <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20V1.rar"
-                                    class="btn btn-primary btn-sm" download>Download</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Injektor Point Blank V2</td>
-                            <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20V2.rar"
-                                    class="btn btn-primary btn-sm" download>Download</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Injektor Point Blank V5</td>
-                            <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20V5.rar"
-                                    class="btn btn-primary btn-sm" download>Download</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Injektor Point Blank Private Server</td>
-                            <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20PRIVATE.rar"
-                                    class="btn btn-primary btn-sm" download>Download</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Injektor Lost Saga Origin</td>
-                            <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/VVIP%20MODS%20-%20Lost%20Saga%20Origin%20Valofe.rar"
-                                    class="btn btn-primary btn-sm" download>Download</a>
-                            </td>
-                        </tr>
-                        <!-- Tambahkan baris lain sesuai kebutuhan -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <h1 class="mb-4">File Downloads</h1>
+        <p class="lead mb-4">Klik pada tombol download untuk mengunduh file yang tersedia.</p>
+        <table class="table table-striped table-bordered">
+            <thead class="text-center">
+                <tr>
+                    <th>#</th>
+                    <th>Nama File</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td>1</td>
+                    <td>Injektor Point Blank V1</td>
+                    <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20V1.rar"
+                            class="btn btn-primary btn-sm" download>Download</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Injektor Point Blank V2</td>
+                    <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20V2.rar"
+                            class="btn btn-primary btn-sm" download>Download</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Injektor Point Blank V5</td>
+                    <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20V5.rar"
+                            class="btn btn-primary btn-sm" download>Download</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Injektor Point Blank Private Server</td>
+                    <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/INJECTOR%20POINT%20BLANK%20PRIVATE.rar"
+                            class="btn btn-primary btn-sm" download>Download</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Injektor Lost Saga Origin</td>
+                    <td><a href="https://raw.githubusercontent.com/pio-razorr/alvin-files/main/VVIP%20MODS%20-%20Lost%20Saga%20Origin%20Valofe.rar"
+                            class="btn btn-primary btn-sm" download>Download</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
